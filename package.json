@@ -2,13 +2,11 @@
   "name": "influ-app-landing",
   "version": "0.1.0",
   "private": true,
-  "description": "Standalone static export of the Inflique landing page for web.inflique.com. Content is synced from influ-app-frontend — see README.",
+  "description": "Standalone static export of the Inflique landing page for web.inflique.com. Fully independent codebase — see README.",
   "scripts": {
-    "sync": "bash scripts/sync-from-main.sh",
     "check-env": "node scripts/check-env.mjs",
-    "prebuild": "npm run check-env && npm run sync",
     "build": "next build",
-    "dev": "npm run sync && next dev",
+    "dev": "next dev",
     "start": "next start",
     "lint": "next lint"
   },
