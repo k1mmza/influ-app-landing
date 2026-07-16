@@ -83,7 +83,8 @@ export default function PrivacyPage() {
       <Section n={7} title="Your Rights &amp; Choices">
         <p>
           You can review and update most profile information from your account settings, disconnect a
-          connected platform at any time, and request account deletion by contacting support.
+          connected platform at any time, and request account deletion by contacting{" "}
+          <a href="mailto:support@inflique.com">support</a>.
         </p>
       </Section>
 
@@ -106,7 +107,10 @@ export default function PrivacyPage() {
       </Section>
 
       <Section n={11} title="Contact">
-        <p>Questions about this Privacy Policy can be sent to the Inflique support team.</p>
+        <p>
+          Questions about this Privacy Policy can be sent to{" "}
+          <a href="mailto:support@inflique.com">support@inflique.com</a>.
+        </p>
       </Section>
     </LegalPageLayout>
   );

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "@/lib/app-link";
 import { ArrowRight } from "lucide-react";
 import { LandingHero } from "@/components/landing-hero";

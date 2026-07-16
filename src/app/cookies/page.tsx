@@ -65,7 +65,10 @@ export default function CookiesPage() {
       </Section>
 
       <Section n={7} title="Contact">
-        <p>Questions about this Cookie Policy can be sent to the Inflique support team.</p>
+        <p>
+          Questions about this Cookie Policy can be sent to{" "}
+          <a href="mailto:support@inflique.com">support@inflique.com</a>.
+        </p>
       </Section>
     </LegalPageLayout>
   );

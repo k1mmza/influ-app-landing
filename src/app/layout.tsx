@@ -15,9 +15,11 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm" });
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://web.inflique.com"),
   title: "Inflique — cast the right creator",
   description:
     "A casting directory for the creator economy — search creators by niche, reach, and audience, or paste a profile link and get real numbers back in seconds.",
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

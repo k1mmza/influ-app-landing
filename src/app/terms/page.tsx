@@ -107,7 +107,10 @@ export default function TermsPage() {
       </Section>
 
       <Section n={11} title="Contact">
-        <p>Questions about these Terms can be sent to the Inflique support team.</p>
+        <p>
+          Questions about these Terms can be sent to{" "}
+          <a href="mailto:support@inflique.com">support@inflique.com</a>.
+        </p>
       </Section>
     </LegalPageLayout>
   );

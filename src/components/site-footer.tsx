@@ -69,6 +69,12 @@ export function SiteFooter() {
             © {new Date().getFullYear()} Inflique. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
+            <a
+              href="mailto:support@inflique.com"
+              className="font-[family-name:var(--font-grotesk)] text-xs text-[var(--lp-muted)] transition hover:text-[var(--lp-ink)]"
+            >
+              support@inflique.com
+            </a>
             <Link href="/privacy" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-grotesk)] text-xs text-[var(--lp-muted)] transition hover:text-[var(--lp-ink)]">
               Privacy Policy
             </Link>
