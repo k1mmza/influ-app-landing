@@ -16,11 +16,11 @@ import {
 const brandSteps: LaneStep[] = [
   {
     title: "Discover creators",
-    body: "Search the roster by niche, reach, and audience — or paste a profile link to pull real numbers back.",
+    body: "Search the roster by niche, reach, and audience, or paste a profile link to pull real numbers back.",
   },
   {
     title: "Launch a campaign",
-    body: "Write a brief, publish the campaign, and collect applications from creators who fit — no cold outreach.",
+    body: "Write a brief, publish the campaign, and collect applications from creators who fit. No cold outreach needed.",
   },
   {
     title: "Review & track",
@@ -31,7 +31,7 @@ const brandSteps: LaneStep[] = [
 const creatorSteps: LaneStep[] = [
   {
     title: "Build a profile",
-    body: "Upload a media kit PDF and let AI auto-fill your niche, platforms, and audience stats — no long form to fill in.",
+    body: "Upload a media kit PDF and let AI auto-fill your niche, platforms, and audience stats, skipping the long form.",
   },
   {
     title: "Apply to campaigns",
@@ -68,7 +68,7 @@ export default function HowItWorksPage() {
         eyebrow="How Inflique works"
         title="From casting brief"
         highlight="to tracked results."
-        subtitle="Inflique is a casting directory for the creator economy. The path depends on who you are — here's how each side moves from first search to measured results."
+        subtitle="Inflique is a casting directory for the creator economy. The path depends on who you are, so here's how each side moves from first search to measured results."
       >
         <CtaPrimary href="/register">Create a free account</CtaPrimary>
         <CtaSecondary href="/discover">Explore the roster</CtaSecondary>
@@ -85,7 +85,7 @@ export default function HowItWorksPage() {
             <StepLane
               tag="For brands & agencies"
               color="var(--lp-brand)"
-              title="Discover, brief, and track — in one place."
+              title="Discover, brief, and track, all in one place."
               steps={brandSteps}
               index={0}
             />

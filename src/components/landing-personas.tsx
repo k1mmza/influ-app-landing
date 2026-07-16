@@ -4,13 +4,13 @@ import Link from "@/lib/app-link";
 import { ArrowUpRight } from "lucide-react";
 import { LandingAnimate } from "@/components/landing-motion";
 
-// The one place the app's persona identity colours appear on the marketing page —
-// as a restrained tick + label only, never as a fill or the page palette.
+// Persona colors only show up here (a small tick next to the label), never as
+// a fill or in the main palette.
 const LANES = [
   {
     tag: "For brands",
     color: "var(--lp-brand)",
-    title: "Brief creators, not agencies.",
+    title: "Brief creators directly.",
     body: "Search by audience and reach, shortlist in a click, and send a brief without a middleman markup.",
     href: "/agencies",
     cta: "Start a campaign",
@@ -21,7 +21,7 @@ const LANES = [
     title: "Run every client roster in one place.",
     body: "Manage discovery, outreach, and reporting across all your brands from a single workspace.",
     href: "/agencies",
-    cta: "Book a walkthrough",
+    cta: "Start managing clients",
   },
   {
     tag: "For creators",
@@ -39,7 +39,7 @@ export function LandingPersonas() {
       <div className="mx-auto max-w-6xl">
         <LandingAnimate>
           <h2 className="max-w-2xl font-[family-name:var(--font-display)] text-4xl font-semibold leading-tight tracking-tight text-[var(--lp-ink)] md:text-5xl">
-            One directory, three seats at the table.
+            Three ways in, one directory.
           </h2>
         </LandingAnimate>
 

@@ -6,8 +6,8 @@ import Link from "@/lib/app-link";
 import { useRouter } from "@/lib/app-nav";
 import { FormEvent, useEffect, useRef, useState } from "react";
 
-// Concrete casting briefs the bar cycles through — specific to searching over
-// creators, not generic SaaS copy. This is the page's signature: "The Casting Bar".
+// Example queries the search bar rotates through when empty. Kept specific to
+// creator casting rather than generic placeholder text.
 const CASTING_BRIEFS = [
   "skincare · under 100k · Bangkok",
   "vegan chefs on TikTok",
@@ -32,9 +32,8 @@ export function LandingHero() {
   const [briefIndex, setBriefIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Cycle the casting brief shown in the (empty, unfocused) bar. This is the one
-  // deliberate ongoing motion moment; it freezes the instant the visitor engages,
-  // and respects prefers-reduced-motion by never starting.
+  // Rotate the placeholder text in the (empty, unfocused) search bar. Stops as
+  // soon as the user focuses it, and never starts if they prefer reduced motion.
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -63,7 +62,7 @@ export function LandingHero() {
 
   return (
     <section className="relative w-full overflow-hidden bg-[var(--lp-paper)] px-4 pb-24 pt-16 sm:pt-24">
-      {/* Quiet index grid — barely-there texture that reads as "catalog", not decoration. */}
+      {/* Faint grid texture in the background, meant to feel like a catalog index. */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.55]"
@@ -80,7 +79,7 @@ export function LandingHero() {
         <LandingAnimate onMount>
           <p className="mb-6 inline-flex items-center gap-2 font-[family-name:var(--font-grotesk)] text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--lp-muted)]">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--lp-accent)]" />
-            Inflique — creator casting
+            Inflique: creator casting
           </p>
         </LandingAnimate>
 
@@ -94,12 +93,12 @@ export function LandingHero() {
 
         <LandingAnimate onMount delay={230}>
           <p className="mx-auto mt-6 max-w-lg font-[family-name:var(--font-grotesk)] text-base leading-relaxed text-[var(--lp-ink-soft)] sm:text-lg">
-            Search creators by niche, reach, and audience — or paste a profile
+            Search creators by niche, reach, and audience, or paste a profile
             link and get their real numbers back in seconds.
           </p>
         </LandingAnimate>
 
-        {/* The Casting Bar — the signature element. */}
+        {/* Main search input. */}
         <LandingAnimate onMount delay={340}>
           <form onSubmit={handleSubmit} className="mx-auto mt-10 max-w-2xl text-left">
             <div className="group relative flex flex-col gap-2 rounded-2xl border border-[var(--lp-line)] bg-[var(--lp-surface)] p-2 shadow-[0_1px_0_rgba(0,0,0,0.02),0_18px_40px_-24px_rgba(0,0,0,0.25)] transition focus-within:border-[var(--lp-accent-line)] focus-within:shadow-[0_0_0_4px_var(--lp-accent-soft),0_18px_40px_-24px_rgba(0,0,0,0.25)] sm:flex-row sm:items-center">

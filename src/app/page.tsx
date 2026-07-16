@@ -12,7 +12,7 @@ export default function HomePage() {
       <LandingFeatured />
       <LandingPersonas />
 
-      {/* Closing call — quiet, no gradient. A single accent CTA on paper. */}
+      {/* Closing CTA */}
       <section className="w-full bg-[var(--lp-paper)] px-4 py-28">
         <LandingAnimate>
           <div className="mx-auto max-w-3xl text-center">

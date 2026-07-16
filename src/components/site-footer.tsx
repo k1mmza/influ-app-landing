@@ -30,8 +30,8 @@ export function SiteFooter() {
               Inflique
             </Link>
             <p className="mt-4 max-w-xs font-[family-name:var(--font-grotesk)] text-sm leading-relaxed text-[var(--lp-muted)]">
-              A casting directory for the creator economy — search, brief, and track
-              creators in one place.
+              Search, brief, and track creators without leaving the app. One directory
+              for brands, agencies, and creators.
             </p>
           </div>
 

@@ -15,7 +15,7 @@ const features: Feature[] = [
   {
     icon: Sparkles,
     title: "Build a profile in minutes",
-    body: "Upload your media kit as a PDF and AI auto-fills your niche, platforms, and audience stats. No long form — your real numbers do the talking.",
+    body: "Upload your media kit as a PDF and AI auto-fills your niche, platforms, and audience stats. No long form to fill in.",
   },
   {
     icon: Compass,
@@ -25,7 +25,7 @@ const features: Feature[] = [
   {
     icon: Link2,
     title: "Connect YouTube & TikTok",
-    body: "Link your accounts so your content is easy to submit and your numbers come from the source — not a screenshot.",
+    body: "Link your accounts so your content is easy to submit and your numbers come straight from the platform, not a screenshot.",
   },
   {
     icon: Upload,
@@ -40,7 +40,7 @@ const features: Feature[] = [
   {
     icon: MessageSquare,
     title: "Talk to brands directly",
-    body: "Message brands and agencies inside the campaign — the conversation stays attached to the work, not buried in a comment section.",
+    body: "Message brands and agencies inside the campaign. The conversation stays with the work instead of getting buried in a comment section.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function CreatorsPage() {
         eyebrow="For creators"
         title="Get cast by brands"
         highlight="that actually fit."
-        subtitle="Build a profile from your real numbers, apply to campaigns that match your content, and keep a track record brands can trust — more than a DM can carry."
+        subtitle="Build a profile from your real numbers, apply to campaigns that match your content, and keep a track record brands can trust. That carries more weight than a DM."
       >
         <CtaPrimary href="/register">Join as a creator</CtaPrimary>
         <CtaSecondary href="/discover">See the roster</CtaSecondary>
@@ -62,7 +62,7 @@ export default function CreatorsPage() {
           <SectionHeading
             eyebrow="What you get today"
             title="More than a link in your bio."
-            intro="Every one of these works right now — set up a profile and you can start applying to real campaigns."
+            intro="Every one of these works right now. Set up a profile and start applying to real campaigns."
           />
           <FeatureGrid features={features} />
         </div>

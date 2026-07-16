@@ -9,9 +9,9 @@ can't constrain the app's build.
 ## Fully independent codebase
 
 This project has **no relationship to `influ-app-frontend`**. All of `src/` is
-ordinary, committed source owned here — edit `web.inflique.com` by editing these
-files directly. (It previously synced a subset of files from the main frontend;
-that coupling has been removed and the two projects now evolve independently.)
+ordinary, committed source owned here, so you edit `web.inflique.com` by editing
+these files directly. (It used to sync a subset of files from the main
+frontend; that coupling is gone and the two projects evolve independently now.)
 
 Links to app routes resolve to `NEXT_PUBLIC_APP_URL` via the local
 `@/lib/app-link` (wrapping `next/link`) and `@/lib/app-nav` (wrapping
@@ -33,10 +33,10 @@ NEXT_PUBLIC_APP_URL=https://app.inflique.com \
 npm run build
 ```
 
-- `build` is a plain `next build` (static export to `out/`) — no pre-steps.
-- Optionally run `npm run check-env` first — it hard-fails if
+- `build` is a plain `next build` (static export to `out/`), no pre-steps.
+- Optionally run `npm run check-env` first. It hard-fails if
   `NEXT_PUBLIC_API_URL` is unset or localhost.
-- Output is `out/` — upload its contents to the web.inflique.com docroot.
+- Output is `out/`; upload its contents to the web.inflique.com docroot.
 
 Verify the API URL baked in correctly:
 

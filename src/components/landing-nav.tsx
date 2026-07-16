@@ -1,14 +1,10 @@
 "use client";
 
-// Slim public top-nav for the static landing. This is a purpose-built copy of
-// the PUBLIC branch of influ-app-frontend/src/components/navigation.tsx — NOT a
-// synced file — because that component transitively imports useUserStore →
-// lib/api.ts (~1,600 lines), the sidebar context, role-labels and the authed
-// sidebar branch, none of which exist on a logged-out static marketing page.
-//
-// Visitors here are always logged out, so the account avatar / authed branch is
-// dropped entirely. App-route links resolve to NEXT_PUBLIC_APP_URL (the main
-// app) via plain <a> because they cross origins to app.inflique.com.
+// Own version of the public nav, not synced from influ-app-frontend's
+// navigation.tsx. That component pulls in useUserStore, lib/api.ts, the
+// sidebar context and the authed-user branch, none of which apply here since
+// everyone hitting this static site is logged out. App routes use plain <a>
+// tags pointed at NEXT_PUBLIC_APP_URL since they cross over to app.inflique.com.
 import { ThemeToggle } from "@/components/theme-toggle";
 import { toAppHref } from "@/lib/app-url";
 

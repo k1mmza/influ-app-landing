@@ -1,16 +1,13 @@
 "use client";
 
-// Shared marketing primitives for the public info pages (/how-it-works,
-// /agencies, /creators). Built on the landing redesign's --lp-* token system
-// (porcelain/graphite/persimmon) + Bricolage display / Space Grotesk body, so
-// these secondary pages read as one system with the landing page rather than
-// inventing new layout language. Reveal-on-scroll reuses LandingAnimate.
+// Shared building blocks for the public info pages (/how-it-works, /agencies,
+// /creators), built on the same --lp-* tokens and fonts as the homepage.
+// Reveal-on-scroll reuses LandingAnimate from the hero.
 import Link from "@/lib/app-link";
 import { ArrowRight, type LucideIcon } from "lucide-react";
 import { LandingAnimate } from "@/components/landing-motion";
 
-// Barely-there "catalog" index grid — the landing hero's signature texture,
-// reused subtly so the info-page heroes feel of a piece with it.
+// Same faint grid texture as the homepage hero, reused so these pages match it.
 const INDEX_GRID_STYLE: React.CSSProperties = {
   backgroundImage:
     "linear-gradient(var(--lp-line) 1px, transparent 1px), linear-gradient(90deg, var(--lp-line) 1px, transparent 1px)",

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://web.inflique.com"),
   title: "Inflique — cast the right creator",
   description:
-    "A casting directory for the creator economy — search creators by niche, reach, and audience, or paste a profile link and get real numbers back in seconds.",
+    "Search creators by niche, reach, and audience, or paste a profile link and get real numbers back in seconds. A casting directory for the creator economy.",
   manifest: "/site.webmanifest",
 };
 
@@ -31,8 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     >
       <body className="font-sans antialiased">
         <Providers>
-          {/* Reproduces the "A4" public layout from the main app's app-shell.tsx:
-              top-nav + content + footer on the marketing paper canvas. */}
+          {/* Matches the main app's public layout: top-nav + content + footer. */}
           <main className="flex min-h-screen flex-col bg-[var(--lp-paper)]">
             <div className="mx-auto w-full max-w-7xl px-4 pt-6">
               <LandingNav />

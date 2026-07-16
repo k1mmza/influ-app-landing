@@ -1,10 +1,10 @@
 "use client";
 
 // Drop-in replacement for the parts of `next/navigation` the landing uses.
-// landing-hero.tsx calls useRouter().push("/discover?…") on form submit — on a
-// static site that client route doesn't exist, so we send a real navigation to
-// the main app origin instead. usePathname is re-exported unchanged (it works
-// fine under static export and only ever reads "/" here).
+// landing-hero.tsx calls useRouter().push("/discover?...") on form submit, but
+// that route doesn't exist on this static site, so push/replace do a real
+// navigation to the main app origin instead. usePathname is re-exported as-is
+// since it works fine under static export and only ever reads "/" here.
 import { toAppHref } from "@/lib/app-url";
 
 export { usePathname } from "next/navigation";

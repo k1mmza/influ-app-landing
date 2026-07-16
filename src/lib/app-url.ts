@@ -1,16 +1,17 @@
-// The static landing lives on web.inflique.com and serves its own public pages
-// (the intro page plus the marketing + legal routes below). Every other in-app
-// route (/discover, /register, /login, /dashboard, ...) is served by the main
-// app on NEXT_PUBLIC_APP_URL. This helper rewrites any such relative route to an
+// web.inflique.com serves its own public pages (the intro page plus the
+// marketing + legal routes below). Every other in-app route (/discover,
+// /register, /login, /dashboard, etc.) is served by the main app on
+// NEXT_PUBLIC_APP_URL, so this helper rewrites any such relative route to an
 // absolute URL under that origin, while landing-local routes stay relative.
 //
 // NEXT_PUBLIC_APP_URL is inlined at build time. If it's unset, links fall back
-// to relative (which 404 on this static site) — .env.example documents it and
-// check-env only hard-fails on the API URL, so keep APP_URL set for real builds.
+// to relative, which 404s on this static site. .env.example documents it, and
+// check-env only hard-fails on the API URL, so double check APP_URL is set
+// before a real build.
 export const APP_BASE = process.env.NEXT_PUBLIC_APP_URL ?? "";
 
-// Routes that this static site serves itself — they must stay relative and NOT
-// be rewritten to the app origin. Everything else falls through to the main app.
+// Routes this static site serves itself. These must stay relative instead of
+// getting rewritten to the app origin; everything else falls through to it.
 const LANDING_LOCAL_ROUTES = [
   "/how-it-works",
   "/creators",

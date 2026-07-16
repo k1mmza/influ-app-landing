@@ -20,7 +20,7 @@ const features: Feature[] = [
   {
     icon: Megaphone,
     title: "Run campaigns end to end",
-    body: "Create, edit, and manage campaign briefs, then collect applications from creators in one place — the whole brief-to-shortlist loop, off email.",
+    body: "Create, edit, and manage campaign briefs, then collect applications from creators in one place. No more running the brief-to-shortlist loop over email.",
   },
   {
     icon: Heart,
@@ -30,7 +30,7 @@ const features: Feature[] = [
   {
     icon: Share2,
     title: "Share for client sign-off",
-    body: "Send a public shortlist or campaign page by link. Clients open it in the browser and review — no account, no login, no PDF export.",
+    body: "Send a public shortlist or campaign page by link. Clients open it in the browser and review, no account or login needed, no PDF export.",
   },
   {
     icon: Activity,
@@ -40,7 +40,7 @@ const features: Feature[] = [
   {
     icon: MessageSquare,
     title: "Message creators in-app",
-    body: "Talk to applicants and confirmed creators inside the campaign — context stays attached instead of scattered across inboxes.",
+    body: "Talk to applicants and confirmed creators inside the campaign, so context stays attached instead of scattered across inboxes.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function AgenciesPage() {
         eyebrow="For agencies & brands"
         title="Run creator campaigns"
         highlight="without the spreadsheet."
-        subtitle="Discover creators, brief a campaign, shortlist applicants, and track what went live — the workflow you're stitching together across sheets and email, in one directory."
+        subtitle="Discover creators, brief a campaign, shortlist applicants, and track what went live. The workflow you're currently stitching together across sheets and email, in one directory."
       >
         <CtaPrimary href="/register">Get started free</CtaPrimary>
         <CtaSecondary href="/discover">Explore the roster</CtaSecondary>
@@ -62,7 +62,7 @@ export default function AgenciesPage() {
           <SectionHeading
             eyebrow="What you can do today"
             title="Everything from first search to sign-off."
-            intro="These are working features, not a roadmap — set up an account and you can run a real campaign through them now."
+            intro="These already work. Set up an account and you can run a real campaign through them today."
           />
           <FeatureGrid features={features} />
         </div>
