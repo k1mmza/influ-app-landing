@@ -13,7 +13,6 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { toAppHref } from "@/lib/app-url";
 
 const PUBLIC_LINKS = [
-  { href: "/discover", label: "Discover", tip: "Search and filter creators" },
   { href: "/how-it-works", label: "How it Works", tip: "See how Inflique works" },
   { href: "/creators", label: "Creators", tip: "Join as a creator" },
   { href: "/agencies", label: "Agencies & Brands", tip: "Start running campaigns" },
@@ -49,12 +48,6 @@ export function LandingNav() {
 
       <div className="flex items-center gap-2">
         <ThemeToggle />
-        <a
-          href={toAppHref("/login")}
-          className="hidden rounded-full px-4 py-2 font-[family-name:var(--font-grotesk)] text-sm font-medium text-[var(--lp-ink-soft)] transition hover:text-[var(--lp-ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lp-accent)] sm:inline-flex"
-        >
-          Log in
-        </a>
         <a
           href={toAppHref("/register")}
           className="inline-flex items-center gap-1.5 rounded-full bg-[var(--lp-accent)] px-4 py-2 font-[family-name:var(--font-grotesk)] text-sm font-semibold text-[var(--lp-accent-ink)] transition hover:brightness-[1.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lp-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--lp-paper)]"

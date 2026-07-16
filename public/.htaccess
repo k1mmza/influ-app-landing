@@ -1,0 +1,21 @@
+# Serve the Next.js static export on Apache with clean, extensionless URLs.
+# The export writes flat files (privacy.html, how-it-works.html, ...), but the
+# nav/footer link to /privacy, /how-it-works, etc. — so map those to the .html
+# file on disk. This file ships in the build output (public/ -> out/) so it
+# survives `rsync --delete` on every redeploy.
+
+# Use explicit rewrites below, not content negotiation.
+Options -MultiViews
+
+# Custom not-found page from the export.
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+# For a request that isn't an existing file or directory, if "<request>.html"
+# exists on disk, serve it. ("/" is a directory -> DirectoryIndex serves
+# index.html; "/foo.css" exists -> served directly; "/privacy" -> privacy.html.)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
