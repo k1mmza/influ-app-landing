@@ -16,7 +16,7 @@ const PUBLIC_LINKS = [
 
 export function LandingNav() {
   return (
-    <nav className="sticky top-6 z-50 mb-8 flex items-center justify-between gap-6 rounded-2xl border border-[var(--lp-line)] bg-[var(--lp-paper)]/85 px-4 py-2.5 shadow-[0_10px_30px_-22px_rgba(0,0,0,0.35)] backdrop-blur-md sm:px-5">
+    <nav className="sticky top-0 z-50 mb-8 flex w-full items-center justify-between gap-6 border-b border-[var(--lp-line)] bg-[var(--lp-paper)] px-4 py-2.5 shadow-[0_2px_16px_-10px_rgba(0,0,0,0.35)] sm:px-8">
       <div className="flex items-center gap-2">
         <a
           href="/"

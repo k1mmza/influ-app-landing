@@ -33,9 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Providers>
           {/* Matches the main app's public layout: top-nav + content + footer. */}
           <main className="flex min-h-screen flex-col bg-[var(--lp-paper)]">
-            <div className="mx-auto w-full max-w-7xl px-4 pt-6">
-              <LandingNav />
-            </div>
+            <LandingNav />
             <div className="flex-1">{children}</div>
             <div className="mx-auto w-full max-w-6xl px-4 pb-6">
               <SiteFooter />
