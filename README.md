@@ -28,7 +28,7 @@ next-themes-only providers wrapper.
 Both env vars are **baked in at build time** (there is no runtime server):
 
 ```bash
-NEXT_PUBLIC_API_URL=https://influ-app-backend.onrender.com \
+NEXT_PUBLIC_API_URL=https://api.inflique.com \
 NEXT_PUBLIC_APP_URL=https://app.inflique.com \
 npm run build
 ```
@@ -41,7 +41,7 @@ npm run build
 Verify the API URL baked in correctly:
 
 ```bash
-grep -r "influ-app-backend.onrender.com" out/ | head -1   # should match
+grep -r "api.inflique.com" out/ | head -1   # should match
 ```
 
 ## Local preview
